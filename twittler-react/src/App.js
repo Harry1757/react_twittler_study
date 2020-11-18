@@ -18,15 +18,15 @@ class State extends Component{
       }
     ]
   }
-  handleChangeName = (연주) =>{
-    this.setState({name: 연주.target.value})
+  handleChangeName = (e) =>{
+    this.setState({name: e.target.value})
   }
-  handleChangeText = (연주) =>{
-    this.setState({text: 연주.target.value})
+  handleChangeText = (e) =>{
+    this.setState({text: e.target.value})
   }
 
-  handleSubmit = (연주) =>{
-    연주.preventDefault()
+  handleSubmit = (e) =>{
+    e.preventDefault()
     const {name,text,tweets} =this.state;
     this.setState({
       tweets : tweets.concat({
@@ -48,6 +48,7 @@ class State extends Component{
           <textarea value={this.state.value} onChange={this.handleChangeText} style = {{float:"left", height:"40px", width:"67%",marginLeft:"60px"}}/>
           <button onClick={this.handleSubmit} style ={{float:"right",width:"20%",height:"40px"}}>TWITTE</button>
          </div><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         
         <ul>
           {this.state.tweets.map((item,index)=>(
           <NewT uuid={index} name={item.name} date={item.date} text={item.text} />
