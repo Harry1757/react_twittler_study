@@ -8,15 +8,7 @@ body {
   font-family: arial, sans-serif;
 }
 
-.title{
-  background:blue;
-  width: 100%;
-  display: flex;
-  color: white;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 20px;
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -52,9 +44,3 @@ body {
   }
 }
 
-.list{
-  margin-top: 30px;
-  text-align:left;
-  padding-left: 20px;
-  padding-right:20px;
-}
